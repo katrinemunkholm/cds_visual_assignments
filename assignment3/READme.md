@@ -40,9 +40,7 @@ These include:
 - **Fine-Tuning Strategy**: Unfroze the last convolutional block of the pre-trained VGG16 model by allowing the last 4 layers to be trainable, enabling further adaptation to the specific document classification task.
 - **Optimization Strategy**: Compiled the model with Stochastic Gradient Descent (SGD) optimizer, employing a lower learning rate of 0.0001 and momentum of 0.9 for fine-tuning, aiming for controlled updates and stable convergence during training.
 
-These modifications are aimed at enhancing the model's ability to extract discriminative features from document images and improve classification accuracy.
-
-Gradually implementing these did indeed improve model performance, resulting in the final classification report and learning curve which can be found in the folder 'out.
+These modifications are aimed at enhancing the model's ability to extract discriminative features from document images and improve classification accuracy. Gradually implementing these did indeed improve model performance, resulting in the final classification report and learning curve which can be found in the folder 'out'.
 
 The classification report reveals high F1-scores across multiple classes, particularly notable in classes such as "Email" and "ADVE," where predictions were accurate approximately 94% and 89% of the time, respectively.
 Instances of lower accuracy scores are evident in the "Scientific" class. One possible explanation for this could be the diverse nature of scientific disciplines, each adhering to distinct conventions, resulting in varying visual appearances of articles and papers. This diversity may pose challenges for the CNN in accurately classifying documents belonging to this category. Overall, the model demonstrates satisfactory performance in classifying documents across the 10 categories solely based on their visual appearance, as indicated by the weighted average f1-score of 0.79.
